@@ -4,10 +4,9 @@ import { Header } from './components/header/header';
 import { Hero } from './components/hero/hero';
 import { About } from './components/about/about';
 import { Services } from './components/services/services';
-import { Courses } from './components/courses/courses';
 import { Testimonials } from './components/testimonials/testimonials';
-import { Faq } from './components/faq/faq';
 import { Footer } from './components/footer/footer';
+import { MetodoIc } from './components/metodo-ic/metodo-ic';
 
 @Component({
   selector: 'app-root',
@@ -17,10 +16,9 @@ import { Footer } from './components/footer/footer';
     Hero,
     About,
     Services,
-    Courses,
     Testimonials,
-    Faq,
     Footer,
+    MetodoIc,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',

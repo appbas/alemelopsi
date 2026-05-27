@@ -1,0 +1,126 @@
+.s-dark {
+  background-color: var(--bg-dark);
+  padding: 80px 0;
+  color: #ffffff;
+  position: relative;
+  
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+}
+
+.s-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent-gold);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.s-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: #ffffff;
+  
+  em {
+    font-style: italic;
+    color: var(--accent-gold);
+    font-weight: 500;
+  }
+}
+
+.metodo-lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 720px;
+  margin-bottom: 48px;
+}
+
+/* ETAPAS GRID */
+.etapas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.etapa {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 32px 24px;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: var(--transition-smooth);
+  
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--accent-gold);
+    transform: translateY(-4px);
+  }
+}
+
+.etapa-n {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: rgba(251, 248, 244, 0.15);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.etapa-bar {
+  width: 24px;
+  height: 2px;
+  background-color: var(--accent-gold);
+  margin-bottom: 16px;
+}
+
+.etapa-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.etapa-nome {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.etapa-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* SCROLL REVEAL */
+.fi {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: var(--transition-smooth);
+  
+  &.v {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

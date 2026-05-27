@@ -1,0 +1,11 @@
+<section class="s s-dark" id="metodo">
+  <p class="s-label">O Método</p>
+  <h2 class="s-title">Método IC —<br><em>Inteligência e Consciência</em></h2>
+  <p class="metodo-lead">Comportamento não muda com força de vontade. Muda quando você entende o que está fazendo — e por quê. O Método IC integra psicanálise e Inteligência Comportamental para transformação real e sustentável.</p>
+  <div class="etapas">
+    <div class="etapa fi v"><div class="etapa-n">01</div><div class="etapa-bar"></div><div class="etapa-tag">Diagnóstico</div><div class="etapa-nome">Ver o padrão</div><div class="etapa-desc">Nomear o que se repete — sem julgamento, com precisão. O padrão existe porque foi aprendido. E o que foi aprendido pode ser desaprendido.</div></div>
+    <div class="etapa fi v" style="transition-delay:.1s"><div class="etapa-n">02</div><div class="etapa-bar"></div><div class="etapa-tag">Consciência</div><div class="etapa-nome">Entender a origem</div><div class="etapa-desc">Descobrir onde e quando esse padrão foi aprendido — e qual foi sua função original. Quando a função fica clara, o comportamento perde força.</div></div>
+    <div class="etapa fi v" style="transition-delay:.2s"><div class="etapa-n">03</div><div class="etapa-bar"></div><div class="etapa-tag">Transformação</div><div class="etapa-nome">Ressignificar o sentido</div><div class="etapa-desc">Reescrever a narrativa interna — do automático para o consciente. Regulação emocional, limites e decisões a partir de valores.</div></div>
+    <div class="etapa fi v" style="transition-delay:.3s"><div class="etapa-n">04</div><div class="etapa-bar"></div><div class="etapa-tag">Movimento</div><div class="etapa-nome">Ancorar a mudança</div><div class="etapa-desc">Consolidar o novo comportamento com rituais, plano e continuidade. Mudança sem ancoragem é insight que some em 48 horas.</div></div>
+  </div>
+</section>

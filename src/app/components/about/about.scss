@@ -10,7 +10,7 @@
   grid-template-columns: 0.95fr 1.05fr;
   gap: 80px;
   align-items: center;
-  
+
   @media (max-width: 992px) {
     grid-template-columns: 1fr;
     gap: 50px;
@@ -29,7 +29,7 @@
   width: 320px;
   height: 420px;
   border-radius: var(--radius-lg);
-  
+
   @media (max-width: 480px) {
     width: 280px;
     height: 380px;
@@ -59,7 +59,7 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(135deg, var(--accent-gold-light) 0%, rgba(179, 148, 116, 0.05) 100%);
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -68,8 +68,12 @@
     width: 180px;
     height: 180px;
     border-radius: var(--radius-full);
-    background-color: var(--bg-surface);
-    opacity: 0.8;
+    background-image: url('/alessandra_melo_portrait.png');
+    background-size: cover;
+    background-position: center top;
+    box-shadow: var(--shadow-md);
+    border: 2px solid var(--accent-gold);
+    opacity: 0.95;
   }
 }
 
@@ -84,7 +88,7 @@
   border: 1px solid rgba(255, 255, 255, 0.4);
   box-shadow: var(--shadow-sm);
   text-align: center;
-  
+
   .portrait-name {
     font-family: var(--font-serif);
     font-size: 1.25rem;
@@ -92,7 +96,7 @@
     color: var(--text-main);
     margin-bottom: 4px;
   }
-  
+
   .portrait-title {
     font-size: 0.8125rem;
     color: var(--accent-gold);
@@ -148,7 +152,7 @@
   font-size: 2.5rem;
   line-height: 1.2;
   margin-bottom: 24px;
-  
+
   @media (max-width: 768px) {
     font-size: 2rem;
   }
@@ -183,13 +187,13 @@
   padding: 16px;
   border-radius: var(--radius-md);
   border-left: 3px solid var(--accent-gold);
-  
+
   .q-icon {
     font-size: 1.25rem;
     color: var(--accent-gold);
     line-height: 1;
   }
-  
+
   .q-title {
     font-family: var(--font-family);
     font-size: 0.9375rem;
@@ -197,7 +201,7 @@
     color: var(--text-main);
     margin-bottom: 4px;
   }
-  
+
   .q-text {
     font-size: 0.875rem;
     color: var(--text-muted);
@@ -217,7 +221,7 @@
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
   transition: var(--transition-smooth);
-  
+
   &:hover {
     background-color: var(--accent-gold);
     transform: translateY(-2px);
