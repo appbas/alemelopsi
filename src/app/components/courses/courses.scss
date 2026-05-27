@@ -1,0 +1,221 @@
+.courses-section {
+  background-color: var(--bg-surface);
+  position: relative;
+}
+
+.courses-header {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 0 56px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+  .section-subtitle {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+  
+  .courses-header-text {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/* Course card styling */
+.course-card {
+  background-color: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(179, 148, 116, 0.1);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(179, 148, 116, 0.25);
+  }
+  
+  @media (max-width: 576px) {
+    padding: 30px 20px;
+  }
+}
+
+.course-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: var(--accent-gold);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+.course-content-box {
+  margin-bottom: 32px;
+}
+
+.course-meta {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.course-title {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.course-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* Checklist of content items */
+.course-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    font-weight: 500;
+    
+    .check-icon {
+      color: var(--accent-gold);
+      font-weight: 700;
+      line-height: 1;
+    }
+  }
+}
+
+/* Pricing and actions section of card */
+.course-pricing-box {
+  border-top: 1px solid rgba(179, 148, 116, 0.1);
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+  .price-label {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  
+  .price-value-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 4px;
+    
+    .currency {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+    
+    .price-main {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1;
+    }
+  }
+  
+  .price-cash {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+}
+
+.btn-course-checkout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--accent-gold);
+  color: #ffffff;
+  padding: 16px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(179, 148, 116, 0.15);
+  transition: var(--transition-smooth);
+  
+  &:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(56, 66, 82, 0.2);
+  }
+}
+
+.btn-course-checkout.btn-secondary-checkout {
+  background-color: var(--accent-color);
+  box-shadow: var(--shadow-sm);
+  
+  &:hover {
+    background-color: var(--accent-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(179, 148, 116, 0.2);
+  }
+}

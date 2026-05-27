@@ -1,0 +1,126 @@
+.faq-section {
+  background-color: var(--bg-primary);
+  border-top: 1px solid rgba(179, 148, 116, 0.05);
+  position: relative;
+}
+
+.faq-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 56px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  .section-subtitle {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+  
+  .faq-header-text {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+}
+
+.faq-accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Accordion Item styling */
+.faq-item {
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(179, 148, 116, 0.05);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+  
+  &.active {
+    border-color: rgba(179, 148, 116, 0.2);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+.faq-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  text-align: left;
+  gap: 20px;
+  
+  .faq-question {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-main);
+    transition: var(--transition-smooth);
+  }
+  
+  .faq-arrow {
+    display: flex;
+    align-items: center;
+    color: var(--text-muted);
+    transition: var(--transition-smooth);
+  }
+  
+  &:hover {
+    .faq-question {
+      color: var(--accent-gold);
+    }
+    
+    .faq-arrow {
+      color: var(--accent-gold);
+    }
+  }
+}
+
+/* Rotate arrow icon on active expanded card */
+.faq-item.active {
+  .faq-arrow {
+    transform: rotate(180deg);
+    color: var(--accent-gold);
+  }
+}
+
+/* Smooth Accordion Height CSS Grid transition */
+.faq-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  
+  &.expanded {
+    grid-template-rows: 1fr;
+  }
+}
+
+.faq-content-inner {
+  min-height: 0;
+  padding: 0 24px 24px 24px;
+  
+  p {
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin: 0;
+  }
+}

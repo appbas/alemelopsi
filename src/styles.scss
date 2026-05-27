@@ -1,0 +1,184 @@
+:root {
+  /* Cores da Identidade Visual (Guia Alessandra Melo) */
+  --bg-primary: #F0EBE4; /* Fundo suave, tom Nude */
+  --bg-surface: #ffffff; /* Fundo de cards e seções destacadas */
+  --bg-dark: #4A4038; /* Fundo Escuro para capas e destaques */
+  --text-main: #4A4038; /* Escuro - nunca preto puro */
+  --text-muted: #9A8F84; /* Cinza quente para legendas, assinaturas, dados */
+  --accent-color: #4A4038; /* Destaque principal */
+  --accent-gold: #C9A84C; /* Dourado para barras, linhas, tags, referências */
+  --accent-gold-light: rgba(201, 168, 76, 0.08); /* Dourado muito suave para fundos */
+  --accent-blue: #6A92B8; /* Azul para versículos e citações em itálico */
+  --whatsapp-green: #25d366; /* Cor padrão do WhatsApp para alta conversão */
+  --whatsapp-dark: #128c7e;
+
+  /* Tipografia */
+  --font-family: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+
+  /* Espaçamento e Bordas */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  --max-width-content: 1140px;
+
+  /* Sombras Modernas (Soft Shadows) */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 10px 15px -3px rgba(74, 85, 104, 0.05), 0 4px 6px -2px rgba(74, 85, 104, 0.02);
+  --shadow-lg: 0 20px 25px -5px rgba(74, 85, 104, 0.08), 0 10px 10px -5px rgba(74, 85, 104, 0.03);
+
+  /* Transição Suave */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base resets e estilos globais */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-family);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tipografia */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--text-main);
+  margin-top: 0;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-family);
+  transition: var(--transition-smooth);
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: var(--max-width-content);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section-padding {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  
+  @media (max-width: 768px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+/* Custom Selection styling */
+::selection {
+  background-color: var(--accent-gold-light);
+  color: var(--text-main);
+}
+
+/* Elegant Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e2dcd5;
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+/* Elementos Gráficos (Guia de Identidade Visual) */
+.brand-gold-bar {
+  width: 36px;
+  height: 4px;
+  background-color: var(--accent-gold);
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.brand-tag {
+  display: inline-block;
+  border: 1px solid var(--accent-gold);
+  background-color: transparent;
+  color: var(--text-main);
+  font-family: var(--font-family);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+}
+
+.brand-divider {
+  width: 40px;
+  height: 1px;
+  border: none;
+  border-top: 0.5px solid var(--accent-gold);
+  margin: 16px 0;
+}
+
+.brand-anchor-verse {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--accent-blue);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.brand-anchor-verse-ref {
+  color: var(--accent-gold);
+  font-family: var(--font-family);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+

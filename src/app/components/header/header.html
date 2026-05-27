@@ -1,0 +1,63 @@
+<header class="header">
+  <div class="container header-container">
+    <a href="#" class="logo" (click)="closeMenu()">
+      Alemelopsi
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="nav-desktop">
+      <a href="#about" class="nav-link">Sobre</a>
+      <a href="#services" class="nav-link">Metodologia</a>
+      <a href="#courses" class="nav-link">Cursos</a>
+      <a href="#testimonials" class="nav-link">Depoimentos</a>
+      <a href="#faq" class="nav-link">Dúvidas</a>
+    </nav>
+
+    <div class="actions-desktop">
+      <a href="https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre as consultas de psicanálise." 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="btn-cta-whatsapp"
+         id="cta-header-whatsapp">
+         <span class="whatsapp-icon">
+           <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+             <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.333 4.982L2 22l5.233-1.371a9.936 9.936 0 0 0 4.779 1.222h.004c5.505 0 9.99-4.478 9.99-9.985A9.983 9.983 0 0 0 12.012 2zm4.986 14.124c-.274.773-1.354 1.408-1.854 1.488-.458.073-.82.355-2.82-.44-2.553-1.014-4.137-3.606-4.266-3.777-.127-.17-1.042-1.384-1.042-2.637 0-1.253.65-1.866.88-2.112.23-.246.5-.308.666-.308.167 0 .334.003.479.01.149.007.35-.056.549.424.2.483.684 1.666.744 1.787.06.121.1.263.02.424-.08.162-.12.263-.24.404-.12.142-.253.315-.36.424-.12.12-.246.25-.106.49.14.24.62 1.024 1.33 1.656.917.817 1.69 1.07 1.93 1.19.24.12.38.1.52-.06.14-.16.6-.7 1.14-1.26.18-.18.36-.15.54-.09s1.14.538 1.34.638c.2.1.33.15.38.238.05.09.05.52-.22 1.294z"/>
+           </svg>
+         </span>
+         Falar no WhatsApp
+      </a>
+    </div>
+
+    <!-- Mobile Hamburguer Button -->
+    <button 
+      class="btn-hamburger" 
+      [class.active]="isMenuOpen()" 
+      (click)="toggleMenu()"
+      aria-label="Abrir menu de navegação"
+      id="hamburger-menu-btn">
+      <span class="bar bar-1"></span>
+      <span class="bar bar-2"></span>
+      <span class="bar bar-3"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Drawer Overlay Menu -->
+  <div class="mobile-drawer" [class.open]="isMenuOpen()">
+    <nav class="nav-mobile">
+      <a href="#about" class="nav-link-mobile" (click)="closeMenu()">Sobre Mim</a>
+      <a href="#services" class="nav-link-mobile" (click)="closeMenu()">Metodologia</a>
+      <a href="#courses" class="nav-link-mobile" (click)="closeMenu()">Cursos Online</a>
+      <a href="#testimonials" class="nav-link-mobile" (click)="closeMenu()">Depoimentos</a>
+      <a href="#faq" class="nav-link-mobile" (click)="closeMenu()">Dúvidas Frequentes</a>
+      
+      <a href="https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre as consultas de psicanálise." 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="btn-whatsapp-mobile"
+         (click)="closeMenu()"
+         id="cta-mobile-whatsapp">
+         Falar no WhatsApp
+      </a>
+    </nav>
+  </div>
+</header>
