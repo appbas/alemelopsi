@@ -29,8 +29,17 @@
   position: relative;
   z-index: 1100;
   
+  .logo-accent {
+    color: var(--accent-gold);
+    transition: var(--transition-smooth);
+  }
+  
   &:hover {
     color: var(--accent-gold);
+    
+    .logo-accent {
+      color: var(--text-main);
+    }
   }
 }
 
